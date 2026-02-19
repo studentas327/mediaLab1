@@ -1,9 +1,8 @@
-// control.js - Media Lab 1
-// Student: studentas327
+
 
 let player = null;
 
-// Initialize when page loads
+
 document.addEventListener('DOMContentLoaded', function() {
     player = document.getElementById('videoPlayer');
     
@@ -16,64 +15,64 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('load1').addEventListener('click', loadVideo1);
     document.getElementById('load2').addEventListener('click', loadVideo2);
     
-    console.log('✅ Video Player Initialized');
+    console.log(' Video Player Initialized');
 });
 
-// Feature 1: Play
+
 function playVideo() {
     if (player) {
         player.play();
-        console.log('▶ Playing video');
+        console.log(' Playing video');
     }
 }
 
-// Feature 2: Pause
+
 function pauseVideo() {
     if (player) {
         player.pause();
-        console.log('⏸ Video paused');
+        console.log(' Video paused');
     }
 }
 
-// Feature 3: Stop
+
 function stopVideo() {
     if (player) {
         player.pause();
         player.currentTime = 0;
-        console.log('⏹ Video stopped');
+        console.log(' Video stopped');
     }
 }
 
-// Feature 4: Jump Forward 5 seconds
+
 function jumpForward() {
     if (player) {
         player.currentTime += 5;
-        console.log('⏩ Jumped forward 5s. Current time:', player.currentTime);
+        console.log(' Jumped forward 5s. Current time:', player.currentTime);
     }
 }
 
-// Feature 5: Jump Backward 5 seconds
+
 function jumpBackward() {
     if (player) {
         player.currentTime = Math.max(0, player.currentTime - 5);
-        console.log('⏪ Jumped backward 5s. Current time:', player.currentTime);
+        console.log(' Jumped backward 5s. Current time:', player.currentTime);
     }
 }
 
-// Feature 6: Load Video 1 from Playlist
+
 function loadVideo1() {
     if (player) {
         player.src = document.getElementById('url1').value;
         player.play();
-        console.log('📹 Loaded Video 1');
+        console.log(' Loaded Video 1');
     }
 }
 
-// Feature 7: Load Video 2 from Playlist
+
 function loadVideo2() {
     if (player) {
         player.src = document.getElementById('url2').value;
         player.play();
-        console.log('📹 Loaded Video 2');
+        console.log(' Loaded Video 2');
     }
 }
